@@ -1,75 +1,70 @@
 export default function Hero() {
   return (
-    <section className="relative bg-gradient-to-br from-[#1E3A5F] via-[#2d5077] to-[#1E3A5F]">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16 py-20 md:py-32">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <div className="space-y-8 text-white">
-            <h1 style={{ color: '#ffffff' }} className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-              Trouvez le financement adapté à votre entreprise en quelques clics.
-            </h1>
-            <p style={{ color: '#f3f4f6' }} className="text-xl md:text-2xl leading-relaxed">
-              Nous transmettons votre demande à des partenaires financiers qualifiés (banques, fintechs, courtiers). <strong style={{ color: '#ffffff' }}>Gratuit, rapide, sans engagement.</strong>
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <a
-                href="#formulaire"
-                className="inline-flex items-center justify-center bg-[#00B8A9] hover:bg-[#009688] text-white font-semibold px-10 py-5 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 text-lg transform hover:scale-105"
-              >
-                Démarrer ma demande
-              </a>
-              <a
-                href="#comment-ca-marche"
-                className="inline-flex items-center justify-center bg-white/10 backdrop-blur-sm border-2 border-white/30 hover:bg-white hover:text-[#1E3A5F] text-white font-semibold px-10 py-5 rounded-xl transition-all duration-300 text-lg"
-              >
-                En savoir plus
-              </a>
-            </div>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-8 text-white">
-              <div className="flex items-center gap-2">
-                <div className="flex-shrink-0 w-6 h-6 bg-[#00B8A9] rounded-full flex items-center justify-center">
-                  <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                </div>
-                <span className="text-sm font-medium text-white">Gratuit et sans engagement</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="flex-shrink-0 w-6 h-6 bg-[#00B8A9] rounded-full flex items-center justify-center">
-                  <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                </div>
-                <span className="text-sm font-medium text-white">Réponse sous 48-72h</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="flex-shrink-0 w-6 h-6 bg-[#00B8A9] rounded-full flex items-center justify-center">
-                  <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                </div>
-                <span className="text-sm font-medium text-white">Données protégées RGPD</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="flex-shrink-0 w-6 h-6 bg-[#00B8A9] rounded-full flex items-center justify-center">
-                  <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                </div>
-                <span className="text-sm font-medium text-white">Partenaires vérifiés</span>
-              </div>
-            </div>
+    <section className="relative bg-gradient-to-br from-[#1E3A5F] via-[#2d5077] to-[#1E3A5F] overflow-hidden">
+      {/* Decorative circles */}
+      <div className="absolute top-20 left-10 w-72 h-72 bg-[#00B8A9] rounded-full opacity-10 blur-3xl"></div>
+      <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#00B8A9] rounded-full opacity-10 blur-3xl"></div>
+      
+      <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16 py-24 md:py-36 relative">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-5 py-2 mb-8">
+            <span className="w-2 h-2 bg-[#00B8A9] rounded-full animate-pulse"></span>
+            <span className="text-white text-sm font-medium">Trouvez votre financement professionnel</span>
           </div>
-          <div className="hidden lg:block">
-            <div className="relative aspect-[4/3] bg-gradient-to-br from-[#00B8A9] to-[#008f82] rounded-3xl shadow-2xl overflow-hidden transform hover:scale-105 transition-transform duration-300">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <svg className="w-40 h-40 text-white opacity-40" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z" />
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clipRule="evenodd" />
-                </svg>
+          
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-white mb-8">
+            Le financement adapté à votre entreprise
+            <span className="block mt-3 bg-gradient-to-r from-[#00B8A9] to-[#00E5D0] bg-clip-text text-transparent">
+              en quelques clics
+            </span>
+          </h1>
+          
+          <p className="text-xl md:text-2xl leading-relaxed text-gray-100 mb-12 max-w-3xl mx-auto">
+            Nous transmettons votre demande à des partenaires financiers qualifiés (banques, fintechs, courtiers). 
+            <strong className="text-white block mt-2">Gratuit, rapide, sans engagement.</strong>
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-5 justify-center items-center mb-16">
+            <a
+              href="#formulaire"
+              className="group inline-flex items-center justify-center bg-gradient-to-r from-[#00B8A9] to-[#00E5D0] hover:from-[#00E5D0] hover:to-[#00B8A9] text-[#1E3A5F] font-bold px-10 py-5 rounded-xl shadow-2xl hover:shadow-[0_20px_60px_rgba(0,184,169,0.4)] transition-all duration-300 text-lg transform hover:scale-105"
+            >
+              Démarrer ma demande
+              <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
+            </a>
+            <a
+              href="#comment-ca-marche"
+              className="inline-flex items-center justify-center bg-white/10 backdrop-blur-sm border-2 border-white/30 hover:bg-white hover:border-white text-white hover:text-[#1E3A5F] font-semibold px-10 py-5 rounded-xl transition-all duration-300 text-lg"
+            >
+              En savoir plus
+            </a>
+          </div>
+          
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
+            {[
+              { icon: '✓', text: 'Gratuit et sans engagement' },
+              { icon: '⚡', text: 'Réponse sous 48-72h' },
+              { icon: '🔒', text: 'Données protégées RGPD' },
+              { icon: '✨', text: 'Partenaires vérifiés' },
+            ].map((item, index) => (
+              <div key={index} className="flex flex-col items-center gap-3 p-4 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:bg-white/10 transition-all duration-300">
+                <div className="w-10 h-10 bg-gradient-to-br from-[#00B8A9] to-[#00E5D0] rounded-xl flex items-center justify-center text-xl font-bold text-[#1E3A5F] shadow-lg">
+                  {item.icon}
+                </div>
+                <span className="text-sm font-medium text-white text-center leading-tight">{item.text}</span>
               </div>
-            </div>
+            ))}
           </div>
         </div>
+      </div>
+      
+      {/* Wave divider */}
+      <div className="absolute bottom-0 left-0 right-0">
+        <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-auto">
+          <path d="M0 48L60 42C120 36 240 24 360 21C480 18 600 24 720 28C840 32 960 34 1080 31C1200 28 1320 20 1380 16L1440 12V80H1380C1320 80 1200 80 1080 80C960 80 840 80 720 80C600 80 480 80 360 80C240 80 120 80 60 80H0V48Z" fill="white"/>
+        </svg>
       </div>
     </section>
   );

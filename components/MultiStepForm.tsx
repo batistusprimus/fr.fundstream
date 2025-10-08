@@ -115,9 +115,12 @@ export default function MultiStepForm() {
   const progressPercentage = (currentStep / 4) * 100;
 
   return (
-    <section id="formulaire" className="py-20 md:py-32 bg-gradient-to-br from-[#F8FAFC] to-[#EFF6FF] scroll-mt-24 md:scroll-mt-28">
+    <section id="formulaire" className="py-20 md:py-32 bg-gradient-to-br from-[#F8FAFC] via-white to-[#EFF6FF] scroll-mt-24 md:scroll-mt-28">
       <div className="max-w-3xl mx-auto px-6">
-        <div className="text-center mb-12">
+        <div className="text-center mb-16">
+          <div className="inline-block bg-gradient-to-r from-[#00B8A9]/10 to-[#00E5D0]/10 rounded-full px-5 py-2 mb-6">
+            <span className="text-[#00B8A9] font-semibold text-sm">FORMULAIRE DE DEMANDE</span>
+          </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#1E3A5F] mb-6">
             Démarrez votre demande
           </h2>
@@ -128,23 +131,30 @@ export default function MultiStepForm() {
 
         {/* Progress Bar */}
         <div className="mb-10">
-          <div className="flex justify-between mb-3">
-            <span className="text-base font-semibold text-[#1E3A5F]">Étape {currentStep} sur 4</span>
-            <span className="text-base font-semibold text-[#00B8A9]">{Math.round(progressPercentage)}%</span>
+          <div className="flex justify-between mb-4">
+            <span className="text-base font-bold text-[#1E3A5F]">Étape {currentStep} sur 4</span>
+            <span className="text-base font-bold text-[#00B8A9]">{Math.round(progressPercentage)}%</span>
           </div>
-          <div className="w-full bg-[#E2E8F0] rounded-full h-3 shadow-inner">
+          <div className="relative w-full bg-[#E2E8F0] rounded-full h-4 shadow-inner overflow-hidden">
             <div
-              className="bg-gradient-to-r from-[#00B8A9] to-[#009688] h-3 rounded-full transition-all duration-500 shadow-md"
+              className="absolute top-0 left-0 h-full bg-gradient-to-r from-[#00B8A9] to-[#00E5D0] rounded-full transition-all duration-500 shadow-lg"
               style={{ width: `${progressPercentage}%` }}
-            />
+            >
+              <div className="absolute right-2 top-1/2 -translate-y-1/2 w-2 h-2 bg-white rounded-full animate-pulse"></div>
+            </div>
           </div>
         </div>
 
-        <form onSubmit={handleSubmit} className="bg-white p-10 rounded-2xl shadow-xl border border-[#E2E8F0]">
+        <form onSubmit={handleSubmit} className="bg-white p-10 rounded-2xl shadow-2xl border-2 border-[#E2E8F0]">
           {/* Étape 1 : Besoin de financement */}
           {currentStep === 1 && (
             <div className="space-y-6">
-              <h3 className="text-xl font-semibold text-[#1E3A5F] mb-4">Votre besoin de financement</h3>
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-10 h-10 bg-gradient-to-br from-[#00B8A9] to-[#00E5D0] rounded-xl flex items-center justify-center text-white font-bold text-lg shadow-lg">
+                  1
+                </div>
+                <h3 className="text-2xl font-bold text-[#1E3A5F]">Votre besoin de financement</h3>
+              </div>
               
               <div>
                 <label className="block text-sm font-medium text-[#1E3A5F] mb-3">
@@ -207,7 +217,12 @@ export default function MultiStepForm() {
           {/* Étape 2 : Votre entreprise */}
           {currentStep === 2 && (
             <div className="space-y-6">
-              <h3 className="text-xl font-semibold text-[#1E3A5F] mb-4">Votre entreprise</h3>
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-10 h-10 bg-gradient-to-br from-[#00B8A9] to-[#00E5D0] rounded-xl flex items-center justify-center text-white font-bold text-lg shadow-lg">
+                  2
+                </div>
+                <h3 className="text-2xl font-bold text-[#1E3A5F]">Votre entreprise</h3>
+              </div>
               
               <div>
                 <label className="block text-sm font-medium text-[#1E3A5F] mb-3">
@@ -270,7 +285,12 @@ export default function MultiStepForm() {
           {/* Étape 3 : Vos coordonnées */}
           {currentStep === 3 && (
             <div className="space-y-6">
-              <h3 className="text-xl font-semibold text-[#1E3A5F] mb-4">Vos coordonnées</h3>
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-10 h-10 bg-gradient-to-br from-[#00B8A9] to-[#00E5D0] rounded-xl flex items-center justify-center text-white font-bold text-lg shadow-lg">
+                  3
+                </div>
+                <h3 className="text-2xl font-bold text-[#1E3A5F]">Vos coordonnées</h3>
+              </div>
               
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
@@ -334,7 +354,12 @@ export default function MultiStepForm() {
           {/* Étape 4 : Consentements */}
           {currentStep === 4 && (
             <div className="space-y-6">
-              <h3 className="text-xl font-semibold text-[#1E3A5F] mb-4">Consentements</h3>
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-10 h-10 bg-gradient-to-br from-[#00B8A9] to-[#00E5D0] rounded-xl flex items-center justify-center text-white font-bold text-lg shadow-lg">
+                  4
+                </div>
+                <h3 className="text-2xl font-bold text-[#1E3A5F]">Consentements</h3>
+              </div>
               
               <div className="space-y-4">
                 <label className="flex items-start p-5 bg-[#F8FAFC] rounded-xl border-2 border-[#E2E8F0] hover:border-[#00B8A9] hover:bg-white cursor-pointer transition-all duration-200 shadow-sm hover:shadow-md">
@@ -390,16 +415,22 @@ export default function MultiStepForm() {
               <button
                 type="button"
                 onClick={handleNext}
-                className="ml-auto px-8 py-4 bg-gradient-to-r from-[#00B8A9] to-[#009688] text-white font-semibold rounded-xl hover:shadow-xl transition-all duration-200 shadow-lg transform hover:scale-105"
+                className="group ml-auto px-8 py-4 bg-gradient-to-r from-[#00B8A9] to-[#00E5D0] hover:from-[#00E5D0] hover:to-[#00B8A9] text-[#1E3A5F] font-bold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 inline-flex items-center"
               >
                 Suivant
+                <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
               </button>
             ) : (
               <button
                 type="submit"
-                className="ml-auto px-10 py-4 bg-gradient-to-r from-[#00B8A9] to-[#009688] text-white font-bold rounded-xl hover:shadow-2xl transition-all duration-200 shadow-xl transform hover:scale-105 text-lg"
+                className="group ml-auto px-10 py-4 bg-gradient-to-r from-[#00B8A9] to-[#00E5D0] hover:from-[#00E5D0] hover:to-[#00B8A9] text-[#1E3A5F] font-bold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 text-lg inline-flex items-center"
               >
                 Envoyer ma demande
+                <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                </svg>
               </button>
             )}
           </div>

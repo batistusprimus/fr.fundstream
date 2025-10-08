@@ -43,9 +43,12 @@ export default function WhyFundStream() {
   ];
 
   return (
-    <section className="py-20 md:py-32 bg-white scroll-mt-24 md:scroll-mt-28">
+    <section className="py-20 md:py-32 bg-gradient-to-br from-[#F8FAFC] to-white scroll-mt-24 md:scroll-mt-28">
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
-        <div className="text-center mb-16">
+        <div className="text-center mb-20">
+          <div className="inline-block bg-gradient-to-r from-[#00B8A9]/10 to-[#00E5D0]/10 rounded-full px-5 py-2 mb-6">
+            <span className="text-[#00B8A9] font-semibold text-sm">NOS AVANTAGES</span>
+          </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#1E3A5F] mb-6">
             Pourquoi fund-stream ?
           </h2>
@@ -58,9 +61,9 @@ export default function WhyFundStream() {
           {benefits.map((benefit, index) => (
             <div
               key={index}
-              className="bg-[#F8FAFC] p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-[#E2E8F0] hover:border-[#00B8A9] transform hover:-translate-y-2"
+              className="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-[#E2E8F0] hover:border-[#00B8A9] transform hover:-translate-y-3"
             >
-              <div className={`${benefit.color} mb-6`}>
+              <div className={`${benefit.color} mb-6 transform group-hover:scale-110 transition-transform duration-300`}>
                 {benefit.icon}
               </div>
               <h3 className="text-xl font-bold text-[#1E3A5F] mb-4">
