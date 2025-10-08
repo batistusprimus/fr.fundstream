@@ -1,6 +1,6 @@
 export default function CTAFinal() {
   return (
-    <section className="py-20 md:py-32 bg-gradient-to-br from-[#1E3A5F] via-[#2d5077] to-[#1E3A5F] text-white">
+    <section className="py-20 md:py-32 bg-gradient-to-br from-[#1E3A5F] via-[#2d5077] to-[#1E3A5F] text-white scroll-mt-24 md:scroll-mt-28">
       <div className="max-w-4xl mx-auto px-6 md:px-12 text-center">
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8">
           Prêt à trouver votre financement ?

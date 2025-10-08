@@ -62,4 +62,10 @@ html {
   scroll-behavior: smooth;
   width: 100%;
   overflow-x: hidden;
+  scroll-padding-top: 88px; /* offset pour header fixe (md: ~64-88px) */
+}
+
+/* Assure un offset même si scroll-margin manque côté composants */
+section[id] {
+  scroll-margin-top: 88px;
 }

@@ -30,7 +30,7 @@ export default function Testimonials() {
   ];
 
   return (
-    <section className="py-20 md:py-32 bg-gradient-to-br from-[#F8FAFC] to-[#EFF6FF]">
+    <section className="py-20 md:py-32 bg-gradient-to-br from-[#F8FAFC] to-[#EFF6FF] scroll-mt-24 md:scroll-mt-28">
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#1E3A5F] mb-6">
