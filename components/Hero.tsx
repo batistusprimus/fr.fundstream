@@ -26,7 +26,7 @@ export default function Hero() {
           
           <div className="flex flex-col sm:flex-row gap-5 justify-center items-center mb-16">
             <a
-              href="#formulaire"
+              href="#form"
               className="group inline-flex items-center justify-center bg-gradient-to-r from-[#00B8A9] to-[#00E5D0] hover:from-[#00E5D0] hover:to-[#00B8A9] text-[#1E3A5F] font-bold px-10 py-5 rounded-xl shadow-2xl hover:shadow-[0_20px_60px_rgba(0,184,169,0.4)] transition-all duration-300 text-lg transform hover:scale-105"
             >
               Démarrer ma demande
@@ -35,7 +35,7 @@ export default function Hero() {
               </svg>
             </a>
             <a
-              href="#comment-ca-marche"
+              href="#how-it-works"
               className="inline-flex items-center justify-center bg-white/10 backdrop-blur-sm border-2 border-white/30 hover:bg-white hover:border-white text-white hover:text-[#1E3A5F] font-semibold px-10 py-5 rounded-xl transition-all duration-300 text-lg"
             >
               En savoir plus

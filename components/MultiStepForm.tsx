@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 
 type FormData = {
@@ -15,6 +15,14 @@ type FormData = {
   entreprise: string;
   consentement1: boolean;
   consentement2: boolean;
+  // Champs cachés pour tracking
+  utm_source: string;
+  utm_campaign: string;
+  utm_medium: string;
+  utm_content: string;
+  utm_term: string;
+  device: string;
+  referrer: string;
 };
 
 type FormErrors = {
@@ -34,9 +42,42 @@ export default function MultiStepForm() {
     email: '',
     telephone: '',
     entreprise: '',
-    consentement1: false,
+    consentement1: true, // Pré-cochée selon le prompt
     consentement2: false,
+    utm_source: '',
+    utm_campaign: '',
+    utm_medium: '',
+    utm_content: '',
+    utm_term: '',
+    device: '',
+    referrer: '',
   });
+
+  // Capturer les paramètres UTM et autres données de tracking au chargement
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const getDevice = () => {
+      const ua = navigator.userAgent;
+      if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
+        return 'tablet';
+      }
+      if (/Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(ua)) {
+        return 'mobile';
+      }
+      return 'desktop';
+    };
+
+    setFormData(prev => ({
+      ...prev,
+      utm_source: urlParams.get('utm_source') || '',
+      utm_campaign: urlParams.get('utm_campaign') || '',
+      utm_medium: urlParams.get('utm_medium') || '',
+      utm_content: urlParams.get('utm_content') || '',
+      utm_term: urlParams.get('utm_term') || '',
+      device: getDevice(),
+      referrer: document.referrer || '',
+    }));
+  }, []);
   const [errors, setErrors] = useState<FormErrors>({});
 
   const updateFormData = (field: keyof FormData, value: string | boolean) => {
@@ -115,17 +156,17 @@ export default function MultiStepForm() {
   const progressPercentage = (currentStep / 4) * 100;
 
   return (
-    <section id="formulaire" className="py-20 md:py-32 bg-gradient-to-br from-[#F8FAFC] via-white to-[#EFF6FF] scroll-mt-24 md:scroll-mt-28">
+    <section id="form" className="py-20 md:py-32 bg-gradient-to-br from-[#F8FAFC] via-white to-[#EFF6FF] scroll-mt-24 md:scroll-mt-28">
       <div className="max-w-3xl mx-auto px-6">
         <div className="text-center mb-16">
           <div className="inline-block bg-gradient-to-r from-[#00B8A9]/10 to-[#00E5D0]/10 rounded-full px-5 py-2 mb-6">
             <span className="text-[#00B8A9] font-semibold text-sm">FORMULAIRE DE DEMANDE</span>
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#1E3A5F] mb-6">
-            Démarrez votre demande
+            Démarrez votre demande de financement
           </h2>
           <p className="text-xl text-[#64748B]">
-            Remplissez ce formulaire en 2 minutes pour recevoir des offres adaptées
+            Remplissez ce formulaire en 2 minutes pour être mis en relation avec des partenaires financiers adaptés à votre profil
           </p>
         </div>
 
@@ -370,7 +411,7 @@ export default function MultiStepForm() {
                     className="w-5 h-5 mt-1 text-[#00B8A9] focus:ring-[#00B8A9] rounded-md"
                   />
                   <span className="ml-4 text-sm text-[#1E3A5F] leading-relaxed">
-                    J&apos;accepte que mes coordonnées soient transmises à des partenaires financiers sélectionnés (banques, fintechs, courtiers) afin qu&apos;ils puissent me contacter pour étudier ma demande de financement. <a href="/politique-de-confidentialite" className="text-[#00B8A9] font-semibold hover:underline">Politique de confidentialité</a> *
+                    J&apos;autorise fund-stream à transmettre ma demande à des partenaires financiers sélectionnés (banques, fintechs, courtiers) afin qu&apos;ils puissent me contacter par téléphone, email et/ou SMS pour étudier mon dossier. <a href="/politique-de-confidentialite" className="text-[#00B8A9] font-semibold hover:underline">Voir Politique de confidentialité</a> *
                   </span>
                 </label>
                 {errors.consentement1 && <p className="text-sm text-[#EF4444] font-medium">{errors.consentement1}</p>}
@@ -383,14 +424,17 @@ export default function MultiStepForm() {
                     className="w-5 h-5 mt-1 text-[#00B8A9] focus:ring-[#00B8A9] rounded-md"
                   />
                   <span className="ml-4 text-sm text-[#1E3A5F] leading-relaxed">
-                    J&apos;accepte de recevoir des informations et offres commerciales de la part de fund-stream et ses partenaires. (Optionnel)
+                    J&apos;accepte de recevoir des conseils et offres de fund-stream pour optimiser ma recherche de financement.
                   </span>
                 </label>
               </div>
 
               <div className="bg-[#EFF6FF] border-2 border-[#BFDBFE] rounded-xl p-5 text-sm text-[#1E3A5F]">
+                <p className="leading-relaxed mb-3">
+                  En soumettant ce formulaire, vous acceptez nos Conditions Générales d&apos;Utilisation.
+                </p>
                 <p className="leading-relaxed">
-                  Conformément au RGPD, vous disposez d&apos;un droit d&apos;accès, de rectification et de suppression de vos données. Pour exercer vos droits, contactez-nous à <a href="mailto:privacy@fundstream.fr" className="text-[#00B8A9] font-semibold hover:underline">privacy@fundstream.fr</a>.
+                  Conformément au RGPD, vous disposez d&apos;un droit d&apos;accès, de rectification et de suppression de vos données. Pour exercer vos droits : <a href="mailto:baptiste@bpcorp.eu" className="text-[#00B8A9] font-semibold hover:underline">baptiste@bpcorp.eu</a>
                 </p>
               </div>
 

@@ -33,7 +33,7 @@ export default function HowItWorks() {
   ];
 
   return (
-    <section id="comment-ca-marche" className="py-20 md:py-32 bg-white scroll-mt-24 md:scroll-mt-28">
+    <section id="how-it-works" className="py-20 md:py-32 bg-white scroll-mt-24 md:scroll-mt-28">
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
         <div className="text-center mb-20">
           <div className="inline-block bg-gradient-to-r from-[#00B8A9]/10 to-[#00E5D0]/10 rounded-full px-5 py-2 mb-6">
@@ -77,7 +77,7 @@ export default function HowItWorks() {
 
         <div className="text-center">
           <a
-            href="#formulaire"
+            href="#form"
             className="group inline-flex items-center justify-center bg-gradient-to-r from-[#00B8A9] to-[#00E5D0] hover:from-[#00E5D0] hover:to-[#00B8A9] text-[#1E3A5F] font-bold px-10 py-5 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 text-lg transform hover:scale-105"
           >
             Démarrer ma demande

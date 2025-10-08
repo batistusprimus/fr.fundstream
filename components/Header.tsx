@@ -24,20 +24,20 @@ export default function Header() {
           
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-8">
-            <a href="#comment-ca-marche" className="text-[#1E3A5F] hover:text-[#00B8A9] font-medium text-base transition-colors duration-200 relative group">
+            <a href="#how-it-works" className="text-[#1E3A5F] hover:text-[#00B8A9] font-medium text-base transition-colors duration-200 relative group">
               Fonctionnement
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#00B8A9] transition-all duration-300 group-hover:w-full"></span>
             </a>
-            <a href="#formulaire" className="text-[#1E3A5F] hover:text-[#00B8A9] font-medium text-base transition-colors duration-200 relative group">
+            <a href="#form" className="text-[#1E3A5F] hover:text-[#00B8A9] font-medium text-base transition-colors duration-200 relative group">
               Formulaire
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#00B8A9] transition-all duration-300 group-hover:w-full"></span>
             </a>
-            <Link href="/contact" className="text-[#1E3A5F] hover:text-[#00B8A9] font-medium text-base transition-colors duration-200 relative group">
+            <a href="#footer" className="text-[#1E3A5F] hover:text-[#00B8A9] font-medium text-base transition-colors duration-200 relative group">
               Contact
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#00B8A9] transition-all duration-300 group-hover:w-full"></span>
-            </Link>
+            </a>
             <a
-              href="#formulaire"
+              href="#form"
               className="inline-flex items-center justify-center bg-gradient-to-r from-[#00B8A9] to-[#009688] hover:from-[#009688] hover:to-[#00B8A9] text-white font-semibold px-7 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
             >
               Démarrer ma demande
@@ -66,28 +66,28 @@ export default function Header() {
         {mobileMenuOpen && (
           <nav className="lg:hidden mt-4 pb-4 space-y-3 border-t border-[#E2E8F0] pt-4">
             <a 
-              href="#comment-ca-marche" 
+              href="#how-it-works" 
               onClick={() => setMobileMenuOpen(false)}
               className="block px-4 py-3 text-[#1E3A5F] hover:text-[#00B8A9] hover:bg-[#F8FAFC] rounded-lg font-medium text-base transition-colors"
             >
               Fonctionnement
             </a>
             <a 
-              href="#formulaire" 
+              href="#form" 
               onClick={() => setMobileMenuOpen(false)}
               className="block px-4 py-3 text-[#1E3A5F] hover:text-[#00B8A9] hover:bg-[#F8FAFC] rounded-lg font-medium text-base transition-colors"
             >
               Formulaire
             </a>
-            <Link 
-              href="/contact" 
+            <a 
+              href="#footer" 
               onClick={() => setMobileMenuOpen(false)}
               className="block px-4 py-3 text-[#1E3A5F] hover:text-[#00B8A9] hover:bg-[#F8FAFC] rounded-lg font-medium text-base transition-colors"
             >
               Contact
-            </Link>
+            </a>
             <a
-              href="#formulaire"
+              href="#form"
               onClick={() => setMobileMenuOpen(false)}
               className="block text-center bg-gradient-to-r from-[#00B8A9] to-[#009688] text-white font-semibold px-6 py-3 rounded-xl shadow-lg transition-all duration-300"
             >

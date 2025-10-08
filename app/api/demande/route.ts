@@ -12,6 +12,14 @@ type DemandePayload = {
   entreprise: string;
   consentement1: boolean;
   consentement2: boolean;
+  // Champs de tracking (optionnels)
+  utm_source?: string;
+  utm_campaign?: string;
+  utm_medium?: string;
+  utm_content?: string;
+  utm_term?: string;
+  device?: string;
+  referrer?: string;
 };
 
 function isValidEmail(email: string): boolean {
