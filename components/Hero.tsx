@@ -2,12 +2,12 @@ import Header from './Header';
 
 export default function Hero() {
   return (
-    <section className="relative bg-gradient-to-br from-[#1E3A5F] via-[#2d5077] to-[#1E3A5F] text-white py-20 md:py-28">
+    <section className="relative bg-gradient-to-br from-[#1E3A5F] via-[#2d5077] to-[#1E3A5F] text-white overflow-hidden">
       <Header />
-      <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16 pt-20 md:pt-24">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 lg:px-16 pt-32 pb-20 md:pt-40 md:pb-28">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="space-y-8">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white">
               Trouvez le financement adapté à votre entreprise en quelques clics.
             </h1>
             <p className="text-xl md:text-2xl text-gray-100 leading-relaxed">
