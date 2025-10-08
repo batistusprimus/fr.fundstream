@@ -43,13 +43,13 @@ export default function WhyFundStream() {
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-[#F5F7FA]">
+    <section className="py-20 md:py-28 bg-white">
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#1E3A5F] mb-4">
+        <div className="text-center mb-20">
+          <h2 className="text-4xl md:text-5xl font-bold text-[#1E3A5F] mb-6">
             Pourquoi fund-stream ?
           </h2>
-          <p className="text-lg text-[#6B7280] max-w-2xl mx-auto">
+          <p className="text-xl text-[#64748B] max-w-3xl mx-auto">
             Une solution simple et efficace pour accéder au financement professionnel
           </p>
         </div>
@@ -58,15 +58,15 @@ export default function WhyFundStream() {
           {benefits.map((benefit, index) => (
             <div
               key={index}
-              className="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300"
+              className="bg-[#F8FAFC] p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-[#E2E8F0] hover:border-[#00B8A9] transform hover:-translate-y-2"
             >
-              <div className={`${benefit.color} mb-4`}>
+              <div className={`${benefit.color} mb-6`}>
                 {benefit.icon}
               </div>
-              <h3 className="text-xl font-semibold text-[#1E3A5F] mb-3">
+              <h3 className="text-xl font-bold text-[#1E3A5F] mb-4">
                 {benefit.title}
               </h3>
-              <p className="text-[#6B7280]">
+              <p className="text-[#64748B] leading-relaxed">
                 {benefit.description}
               </p>
             </div>

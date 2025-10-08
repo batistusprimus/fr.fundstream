@@ -1,14 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&display=swap');
 @import "tailwindcss";
 
 :root {
   --background: #ffffff;
   --foreground: #1E3A5F;
   --navy: #1E3A5F;
+  --navy-light: #2d5077;
   --teal: #00B8A9;
-  --light-gray: #F5F7FA;
-  --medium-gray: #6B7280;
+  --teal-dark: #009688;
+  --light-gray: #F8FAFC;
+  --medium-gray: #64748B;
+  --border-gray: #E2E8F0;
   --success: #10B981;
   --warning: #F59E0B;
   --error: #EF4444;
@@ -40,12 +43,15 @@ body {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   font-size: 16px;
   line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Poppins', system-ui, -apple-system, sans-serif;
   font-weight: 700;
   line-height: 1.2;
+  color: var(--navy);
 }
 
 html {

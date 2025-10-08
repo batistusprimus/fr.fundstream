@@ -33,38 +33,38 @@ export default function HowItWorks() {
   ];
 
   return (
-    <section id="comment-ca-marche" className="py-16 md:py-24 bg-white">
+    <section id="comment-ca-marche" className="py-20 md:py-28 bg-white">
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#1E3A5F] mb-4">
+        <div className="text-center mb-20">
+          <h2 className="text-4xl md:text-5xl font-bold text-[#1E3A5F] mb-6">
             Comment ça marche ?
           </h2>
-          <p className="text-lg text-[#6B7280] max-w-2xl mx-auto">
+          <p className="text-xl text-[#64748B] max-w-3xl mx-auto">
             Un processus simple en 3 étapes pour trouver le financement adapté à votre entreprise
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 md:gap-12">
+        <div className="grid md:grid-cols-3 gap-12 md:gap-16">
           {steps.map((step, index) => (
             <div key={index} className="relative">
               <div className="flex flex-col items-center text-center">
-                <div className="w-16 h-16 bg-[#00B8A9] text-white rounded-full flex items-center justify-center text-2xl font-bold mb-6">
+                <div className="w-20 h-20 bg-gradient-to-br from-[#00B8A9] to-[#009688] text-white rounded-2xl flex items-center justify-center text-3xl font-bold mb-8 shadow-xl">
                   {step.number}
                 </div>
-                <div className="mb-4 text-[#00B8A9]">
+                <div className="mb-6 text-[#00B8A9]">
                   {step.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-[#1E3A5F] mb-3">
+                <h3 className="text-2xl font-bold text-[#1E3A5F] mb-4">
                   {step.title}
                 </h3>
-                <p className="text-[#6B7280]">
+                <p className="text-lg text-[#64748B] leading-relaxed">
                   {step.description}
                 </p>
               </div>
               {index < steps.length - 1 && (
-                <div className="hidden md:block absolute top-8 left-[60%] w-[80%] h-0.5 bg-gradient-to-r from-[#00B8A9] to-gray-300">
+                <div className="hidden md:block absolute top-10 left-[60%] w-[80%] h-0.5 bg-gradient-to-r from-[#00B8A9] to-[#E2E8F0]">
                   <svg className="absolute right-0 top-[-4px]" width="10" height="10" viewBox="0 0 10 10">
-                    <polygon points="0,0 10,5 0,10" fill="#d1d5db" />
+                    <polygon points="0,0 10,5 0,10" fill="#E2E8F0" />
                   </svg>
                 </div>
               )}
@@ -72,10 +72,10 @@ export default function HowItWorks() {
           ))}
         </div>
 
-        <div className="text-center mt-12">
+        <div className="text-center mt-16">
           <a
             href="#formulaire"
-            className="inline-block bg-[#00B8A9] hover:bg-[#009688] text-white font-semibold px-8 py-4 rounded-lg shadow-lg transition-all duration-200"
+            className="inline-flex items-center justify-center bg-[#00B8A9] hover:bg-[#009688] text-white font-semibold px-10 py-5 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 text-lg transform hover:scale-105"
           >
             Démarrer ma demande
           </a>
