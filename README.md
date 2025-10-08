@@ -1,36 +1,79 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# fund-stream France
 
-## Getting Started
+Landing page de conversion pour générer des leads B2B qualifiés pour des entreprises cherchant un financement professionnel en France.
 
-First, run the development server:
+## 🚀 Technologies
+
+- **Next.js 15** - Framework React
+- **TypeScript** - Typage statique
+- **Tailwind CSS** - Styling
+- **React** - Bibliothèque UI
+
+## 🎨 Design
+
+- **Couleurs principales :**
+  - Navy Blue: `#1E3A5F`
+  - Teal: `#00B8A9`
+  - Light Gray: `#F5F7FA`
+
+- **Typographie :**
+  - Headlines: Poppins (SemiBold 600, Bold 700)
+  - Body: Inter (Regular 400, Medium 500, SemiBold 600)
+
+## 📋 Structure du site
+
+1. **Hero** - Section d'accroche avec proposition de valeur
+2. **Comment ça marche** - Process en 3 étapes
+3. **Formulaire multi-étapes** - Collecte de leads (4 étapes)
+4. **Pourquoi fund-stream** - Bénéfices du service
+5. **Témoignages** - Preuves sociales et métriques
+6. **FAQ** - Questions fréquentes
+7. **CTA Final** - Rappel de l'action
+8. **Footer** - Liens légaux et contact
+
+## 🛠️ Installation
 
 ```bash
+# Installer les dépendances
+npm install
+
+# Lancer le serveur de développement
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Build de production
+npm run build
+
+# Lancer la production
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🌐 Pages
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- `/` - Page d'accueil (landing page)
+- `/merci` - Page de remerciement après soumission
+- `/politique-de-confidentialite` - Politique RGPD
+- `/conditions-generales` - CGU
+- `/contact` - Page de contact
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📱 Responsive
 
-## Learn More
+Le site est optimisé pour :
+- Mobile: < 640px (70% du trafic attendu)
+- Tablette: 640px - 1024px
+- Desktop: > 1024px
 
-To learn more about Next.js, take a look at the following resources:
+## 🔒 Conformité
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **RGPD** - Protection des données personnelles
+- **DGCCRF** - Pas de promesses irréalistes
+- Consentement explicite pour la transmission des données
+- Droits d'accès, rectification et suppression
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📧 Contact
 
-## Deploy on Vercel
+- **Email général :** contact@fundstream.fr
+- **Protection des données :** privacy@fundstream.fr
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📄 License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+© 2025 BPC Group. Tous droits réservés.
