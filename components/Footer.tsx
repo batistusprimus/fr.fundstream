@@ -1,10 +1,18 @@
+import Image from 'next/image';
+
 export default function Footer() {
   return (
     <footer className="bg-[#1E3A5F] text-white py-12">
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
-            <h3 className="text-xl font-bold mb-4">fund-stream</h3>
+            <Image
+              src="/fundstream_transparent.png"
+              alt="fund-stream"
+              width={150}
+              height={45}
+              className="h-10 w-auto mb-4 brightness-0 invert"
+            />
             <p className="text-gray-300 text-sm">
               La solution simple et rapide pour trouver le financement adapté à votre entreprise.
             </p>

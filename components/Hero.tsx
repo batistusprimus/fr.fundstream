@@ -1,7 +1,10 @@
+import Header from './Header';
+
 export default function Hero() {
   return (
     <section className="relative bg-gradient-to-br from-[#1E3A5F] to-[#2d5077] text-white py-16 md:py-24 lg:py-32">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
+      <Header />
+      <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16 pt-16 md:pt-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">

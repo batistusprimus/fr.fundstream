@@ -5,6 +5,14 @@ export const metadata: Metadata = {
   title: "fund-stream | Trouvez le financement adapté à votre entreprise",
   description: "Nous transmettons votre demande à des partenaires financiers qualifiés (banques, fintechs, courtiers). Gratuit, rapide, sans engagement.",
   keywords: ["financement entreprise", "prêt professionnel", "crédit entreprise", "financement PME"],
+  icons: {
+    icon: [
+      { url: '/fundstream_transparent (Logo).png' },
+    ],
+    apple: [
+      { url: '/fundstream_transparent (Logo).png' },
+    ],
+  },
   openGraph: {
     title: "fund-stream | Trouvez le financement adapté à votre entreprise",
     description: "Nous transmettons votre demande à des partenaires financiers qualifiés. Gratuit, rapide, sans engagement.",
