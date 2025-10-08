@@ -32,15 +32,6 @@ export default function Testimonials() {
   return (
     <section className="py-20 md:py-32 bg-gradient-to-br from-[#F8FAFC] via-white to-[#EFF6FF] scroll-mt-24 md:scroll-mt-28">
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#1E3A5F] mb-4">
-            Ils nous font confiance
-          </h2>
-          <p className="text-xl text-[#64748B] max-w-2xl mx-auto">
-            Rejoignez les centaines d&apos;entreprises qui ont trouvé leur financement grâce à fund-stream
-          </p>
-        </div>
-
         {/* Stats */}
         <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
           {stats.map((stat, index) => (

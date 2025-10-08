@@ -20,21 +20,23 @@ export default function MediaCoverage() {
         </div>
 
         {/* Logos en grayscale sur une seule ligne */}
-        <div className="flex items-center justify-center gap-8 md:gap-12 lg:gap-16 overflow-x-auto">
-          {mediaLogos.map((media, index) => (
-            <div 
-              key={index}
-              className="flex items-center justify-center grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500 flex-shrink-0"
-            >
-              <Image
-                src={`/Press/${media.file}`}
-                alt={media.name}
-                width={media.width}
-                height={media.height}
-                className="object-contain"
-              />
-            </div>
-          ))}
+        <div className="overflow-x-auto px-6">
+          <div className="flex items-center justify-center gap-8 md:gap-12 lg:gap-16 min-w-max">
+            {mediaLogos.map((media, index) => (
+              <div 
+                key={index}
+                className="flex items-center justify-center grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500 flex-shrink-0"
+              >
+                <Image
+                  src={`/Press/${media.file}`}
+                  alt={media.name}
+                  width={media.width}
+                  height={media.height}
+                  className="object-contain"
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
