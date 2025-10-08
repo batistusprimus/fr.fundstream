@@ -31,54 +31,54 @@
   --font-headline: 'Poppins', system-ui, -apple-system, sans-serif;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  font-size: 16px;
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
-}
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+  }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Poppins', system-ui, -apple-system, sans-serif;
-  font-weight: 700;
-  line-height: 1.2;
-  color: var(--navy);
-}
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+  }
 
-html {
-  scroll-behavior: smooth;
-  width: 100%;
-  overflow-x: hidden;
-  scroll-padding-top: 88px; /* offset pour header fixe (md: ~64-88px) */
-}
+  html {
+    scroll-behavior: smooth;
+    width: 100%;
+    overflow-x: hidden;
+    scroll-padding-top: 88px;
+  }
 
-/* Assure un offset même si scroll-margin manque côté composants */
-section[id] {
-  scroll-margin-top: 88px;
-}
+  section[id] {
+    scroll-margin-top: 88px;
+  }
 
-::selection {
-  background: #00B8A9;
-  color: #ffffff;
-}
+  ::selection {
+    background: #00B8A9;
+    color: #ffffff;
+  }
 
-a {
-  text-underline-offset: 2px;
-}
+  a {
+    text-underline-offset: 2px;
+  }
 
-button, a, input, textarea, select {
-  outline-color: #00B8A9;
+  button, a, input, textarea, select {
+    outline-color: #00B8A9;
+  }
 }
