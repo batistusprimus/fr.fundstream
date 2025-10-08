@@ -17,6 +17,10 @@ type FormData = {
   consentement2: boolean;
 };
 
+type FormErrors = {
+  [K in keyof FormData]?: string;
+};
+
 export default function MultiStepForm() {
   const router = useRouter();
   const [currentStep, setCurrentStep] = useState(1);
@@ -33,7 +37,7 @@ export default function MultiStepForm() {
     consentement1: false,
     consentement2: false,
   });
-  const [errors, setErrors] = useState<Partial<FormData>>({});
+  const [errors, setErrors] = useState<FormErrors>({});
 
   const updateFormData = (field: keyof FormData, value: string | boolean) => {
     setFormData(prev => ({ ...prev, [field]: value }));
@@ -41,7 +45,7 @@ export default function MultiStepForm() {
   };
 
   const validateStep = (step: number): boolean => {
-    const newErrors: Partial<FormData> = {};
+    const newErrors: FormErrors = {};
 
     if (step === 1) {
       if (!formData.montant) newErrors.montant = 'Veuillez sélectionner un montant';
@@ -65,7 +69,7 @@ export default function MultiStepForm() {
       if (!formData.entreprise) newErrors.entreprise = 'Le nom de l\'entreprise est requis';
     } else if (step === 4) {
       if (!formData.consentement1) {
-        newErrors.consentement1 = 'Ce consentement est obligatoire' as any;
+        newErrors.consentement1 = 'Ce consentement est obligatoire';
       }
     }
 
