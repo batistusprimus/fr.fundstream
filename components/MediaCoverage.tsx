@@ -14,20 +14,17 @@ export default function MediaCoverage() {
     <section className="py-20 md:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
         <div className="text-center mb-12">
-          <h3 className="text-2xl md:text-3xl font-bold text-[#1E3A5F] mb-4">
-            Couverture média
+          <h3 className="text-2xl md:text-3xl font-bold text-[#1E3A5F]">
+            Couverture média du marché
           </h3>
-          <p className="text-lg text-[#64748B] italic">
-            Industry coverage from
-          </p>
         </div>
 
-        {/* Logos en grayscale */}
-        <div className="flex flex-wrap items-center justify-center gap-12 md:gap-16">
+        {/* Logos en grayscale sur une seule ligne */}
+        <div className="flex items-center justify-center gap-8 md:gap-12 lg:gap-16 overflow-x-auto">
           {mediaLogos.map((media, index) => (
             <div 
               key={index}
-              className="flex items-center justify-center grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500"
+              className="flex items-center justify-center grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500 flex-shrink-0"
             >
               <Image
                 src={`/Press/${media.file}`}
