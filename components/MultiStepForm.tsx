@@ -103,10 +103,10 @@ export default function MultiStepForm() {
   const progressPercentage = (currentStep / 4) * 100;
 
   return (
-    <section id="formulaire" className="py-20 md:py-28 bg-[#F8FAFC]">
+    <section id="formulaire" className="py-20 md:py-32 bg-gradient-to-br from-[#F8FAFC] to-[#EFF6FF]">
       <div className="max-w-3xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-[#1E3A5F] mb-6">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#1E3A5F] mb-6">
             Démarrez votre demande
           </h2>
           <p className="text-xl text-[#64748B]">

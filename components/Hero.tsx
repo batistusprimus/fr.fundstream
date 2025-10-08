@@ -1,17 +1,14 @@
-import Header from './Header';
-
 export default function Hero() {
   return (
-    <section className="relative bg-gradient-to-br from-[#1E3A5F] via-[#2d5077] to-[#1E3A5F] text-white overflow-hidden">
-      <Header />
-      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 lg:px-16 pt-32 pb-20 md:pt-40 md:pb-28">
+    <section className="relative bg-gradient-to-br from-[#1E3A5F] via-[#2d5077] to-[#1E3A5F] pt-24">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16 py-20 md:py-32">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <div className="space-y-8">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white">
+          <div className="space-y-8 text-white">
+            <h1 style={{ color: '#ffffff' }} className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
               Trouvez le financement adapté à votre entreprise en quelques clics.
             </h1>
-            <p className="text-xl md:text-2xl text-gray-100 leading-relaxed">
-              Nous transmettons votre demande à des partenaires financiers qualifiés (banques, fintechs, courtiers). <strong className="text-white">Gratuit, rapide, sans engagement.</strong>
+            <p style={{ color: '#f3f4f6' }} className="text-xl md:text-2xl leading-relaxed">
+              Nous transmettons votre demande à des partenaires financiers qualifiés (banques, fintechs, courtiers). <strong style={{ color: '#ffffff' }}>Gratuit, rapide, sans engagement.</strong>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <a
@@ -27,14 +24,14 @@ export default function Hero() {
                 En savoir plus
               </a>
             </div>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-8">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-8 text-white">
               <div className="flex items-center gap-2">
                 <div className="flex-shrink-0 w-6 h-6 bg-[#00B8A9] rounded-full flex items-center justify-center">
                   <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                 </div>
-                <span className="text-sm font-medium">Gratuit et sans engagement</span>
+                <span className="text-sm font-medium text-white">Gratuit et sans engagement</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="flex-shrink-0 w-6 h-6 bg-[#00B8A9] rounded-full flex items-center justify-center">
@@ -42,7 +39,7 @@ export default function Hero() {
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                 </div>
-                <span className="text-sm font-medium">Réponse sous 48-72h</span>
+                <span className="text-sm font-medium text-white">Réponse sous 48-72h</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="flex-shrink-0 w-6 h-6 bg-[#00B8A9] rounded-full flex items-center justify-center">
@@ -50,7 +47,7 @@ export default function Hero() {
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                 </div>
-                <span className="text-sm font-medium">Données protégées RGPD</span>
+                <span className="text-sm font-medium text-white">Données protégées RGPD</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="flex-shrink-0 w-6 h-6 bg-[#00B8A9] rounded-full flex items-center justify-center">
@@ -58,7 +55,7 @@ export default function Hero() {
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                 </div>
-                <span className="text-sm font-medium">Partenaires vérifiés</span>
+                <span className="text-sm font-medium text-white">Partenaires vérifiés</span>
               </div>
             </div>
           </div>
@@ -77,4 +74,3 @@ export default function Hero() {
     </section>
   );
 }
-
