@@ -1,6 +1,5 @@
 import Link from 'next/link';
-import dynamic from 'next/dynamic';
-const ContactForm = dynamic(() => import('@/components/ContactForm'), { ssr: false });
+import ContactForm from '@/components/ContactForm';
 
 export const metadata = {
   title: 'Nous contacter | fund-stream',
@@ -66,44 +65,3 @@ export default function Contact() {
     </main>
   );
 }
-
-function ContactForm() {
-  async function onSubmit(formData: FormData) {
-    'use server';
-  }
-  return (
-    <form
-      action={async (formData) => {
-        'use server';
-        // Note: Ici on utilise une route API via fetch côté client côté progressif.
-      }}
-      className="bg-white p-8 rounded-xl border border-[#E2E8F0] shadow-md"
-    >
-      <div className="grid md:grid-cols-2 gap-4">
-        <div>
-          <label className="block text-sm font-semibold text-[#1E3A5F] mb-2">Nom *</label>
-          <input name="nom" required className="w-full px-5 py-4 bg-[#F8FAFC] border-2 border-[#E2E8F0] rounded-xl focus:ring-2 focus:ring-[#00B8A9] focus:border-[#00B8A9]" />
-        </div>
-        <div>
-          <label className="block text-sm font-semibold text-[#1E3A5F] mb-2">Email *</label>
-          <input type="email" name="email" required className="w-full px-5 py-4 bg-[#F8FAFC] border-2 border-[#E2E8F0] rounded-xl focus:ring-2 focus:ring-[#00B8A9] focus:border-[#00B8A9]" />
-        </div>
-      </div>
-      <div className="mt-4">
-        <label className="block text-sm font-semibold text-[#1E3A5F] mb-2">Message *</label>
-        <textarea name="message" required rows={5} className="w-full px-5 py-4 bg-[#F8FAFC] border-2 border-[#E2E8F0] rounded-xl focus:ring-2 focus:ring-[#00B8A9] focus:border-[#00B8A9]"></textarea>
-      </div>
-      <div className="mt-6 flex justify-end">
-        <button
-          formAction={async (formData) => {
-            'use server';
-          }}
-          className="px-8 py-4 bg-gradient-to-r from-[#00B8A9] to-[#009688] text-white font-semibold rounded-xl hover:shadow-xl transition-all duration-200"
-        >
-          Envoyer
-        </button>
-      </div>
-    </form>
-  );
-}
-
