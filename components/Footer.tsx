@@ -48,6 +48,9 @@ export default function Footer() {
         <div className="border-t border-gray-700 pt-8 text-center text-sm text-gray-400">
           <p className="mb-2">fund-stream par BPC Group</p>
           <p>&copy; 2025 BPC Group. Tous droits réservés.</p>
+          <p className="mt-3 text-xs text-gray-500">
+            Build: {process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA?.slice(0, 7) || 'dev'} | Déploiement: {new Date().toISOString()}
+          </p>
         </div>
       </div>
     </footer>
