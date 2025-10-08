@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Footer from '@/components/Footer';
 
 export const metadata = {
   title: 'Merci ! | fund-stream',
@@ -74,7 +73,6 @@ export default function ThankYou() {
           </div>
         </div>
       </div>
-      <Footer />
     </main>
   );
 }

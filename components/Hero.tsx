@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <section className="relative bg-gradient-to-br from-[#1E3A5F] via-[#2d5077] to-[#1E3A5F] pt-24">
+    <section className="relative bg-gradient-to-br from-[#1E3A5F] via-[#2d5077] to-[#1E3A5F]">
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16 py-20 md:py-32">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="space-y-8 text-white">

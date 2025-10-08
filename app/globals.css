@@ -69,3 +69,16 @@ html {
 section[id] {
   scroll-margin-top: 88px;
 }
+
+::selection {
+  background: #00B8A9;
+  color: #ffffff;
+}
+
+a {
+  text-underline-offset: 2px;
+}
+
+button, a, input, textarea, select {
+  outline-color: #00B8A9;
+}

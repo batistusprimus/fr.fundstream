@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Footer from '@/components/Footer';
 
 export const metadata = {
   title: 'Conditions générales d\'utilisation | fund-stream',
@@ -157,7 +156,6 @@ export default function ConditionsGenerales() {
           </div>
         </div>
       </div>
-      <Footer />
     </main>
   );
 }

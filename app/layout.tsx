@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "fund-stream | Trouvez le financement adapté à votre entreprise",
@@ -20,8 +22,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
-      <body className="antialiased">
-        {children}
+      <body className="antialiased bg-white text-[#1E3A5F]">
+        <Header />
+        <main className="min-h-screen w-full pt-20 md:pt-24">
+          {children}
+        </main>
+        <Footer />
       </body>
     </html>
   );

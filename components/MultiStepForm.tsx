@@ -94,9 +94,21 @@ export default function MultiStepForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (validateStep(4)) {
-      // Ici, vous pouvez envoyer les données à votre backend/API
-      console.log('Form submitted:', formData);
-      router.push('/merci');
+      try {
+        const res = await fetch('/api/demande', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(formData),
+        });
+        if (!res.ok) {
+          const data = await res.json().catch(() => ({ error: 'Erreur inconnue' }));
+          alert(data.error || 'Une erreur est survenue.');
+          return;
+        }
+        router.push('/merci');
+      } catch (err) {
+        alert('Impossible d\'envoyer votre demande pour le moment.');
+      }
     }
   };
 

@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Footer from '@/components/Footer';
 
 export const metadata = {
   title: 'Politique de confidentialité | fund-stream',
@@ -163,7 +162,6 @@ export default function PolitiqueConfidentialite() {
           </div>
         </div>
       </div>
-      <Footer />
     </main>
   );
 }
